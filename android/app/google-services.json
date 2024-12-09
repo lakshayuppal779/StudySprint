@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "400577994211",
+    "project_id": "study-sprint-9c722",
+    "storage_bucket": "study-sprint-9c722.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:400577994211:android:f5cc7d936b1c85440e94d6",
+        "android_client_info": {
+          "package_name": "com.example.studyscheduler"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "400577994211-tfebbq7avaovkvjlin01rtj3cfn4hjak.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.studyscheduler",
+            "certificate_hash": "a9e62b6525affe836d437356b9157422b7fd0737"
+          }
+        },
+        {
+          "client_id": "400577994211-7ii1lt1d1jfmj7ks98tavcet87gsjpb0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAbqrctJBtH2oGk1Pgk43jmNZ0hWddJ-LY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "400577994211-7ii1lt1d1jfmj7ks98tavcet87gsjpb0.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "400577994211-5fb601loc54ss6fel30tbjhe5rvefcmm.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.studysprint"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
