@@ -18,7 +18,7 @@ class _ChatScreenState extends State<ChatScreen> {
   final TextEditingController _textController = TextEditingController();
   final FocusNode _textFieldFocus = FocusNode();
   bool _loading = false;
-  static const _apiKey = 'AIzaSyDY512waxAGW2B7UuhSfl8iz59bioGOJKw';
+  static const _apiKey = 'Your api key';
 
   void _scrollDown() {
     WidgetsBinding.instance.addPostFrameCallback(
