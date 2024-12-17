@@ -5,7 +5,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_chat_types/flutter_chat_types.dart' show PreviewData;
 import 'package:flutter_link_previewer/flutter_link_previewer.dart';
 import 'package:fluttertoast/fluttertoast.dart';
-import 'package:get/get.dart';
 import 'package:studyscheduler/notesMaking/ui/views/HomePage.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 import 'package:file_picker/file_picker.dart';
@@ -207,7 +206,7 @@ class _PlannerDetailScreenState extends State<PlannerDetailScreen> {
                                   )
                                       : type == 'pdf'
                                           ? Text(
-                                              'View PDF',
+                                    resource['name'] ?? 'Unnamed Resource',
                                               style: TextStyle(
                                                 color: Colors.white,
                                                 fontWeight: FontWeight.bold,

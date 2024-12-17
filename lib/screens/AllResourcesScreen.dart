@@ -4,6 +4,7 @@ import 'package:flutter_link_previewer/flutter_link_previewer.dart';
 import 'package:flutter_chat_types/flutter_chat_types.dart' show PreviewData;
 import 'package:studyscheduler/screens/PlannerDetailScreen.dart';
 import '../DataModel/Scdheduledatamodel.dart';
+import 'package:url_launcher/url_launcher_string.dart';
 
 class AllResourcesScreen extends StatefulWidget {
   final EducationSchedule schedule;
@@ -109,6 +110,22 @@ class _AllResourcesScreenState extends State<AllResourcesScreen> {
     _fetchPlannerData();
   }
 
+  Future<void> _launchURL(String url) async {
+    try {
+      if (await canLaunchUrlString(url)) {
+        await launchUrlString(url, mode: LaunchMode.externalApplication);
+      } else {
+        throw 'Could not launch $url';
+      }
+    } catch (e) {
+      print("Error launching URL: $e");
+
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text('Could not launch URL: $e')),
+      );
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -189,7 +206,7 @@ class _AllResourcesScreenState extends State<AllResourcesScreen> {
                                     } else if (type == 'pdf') {
                                       // await _openPDF(data);
                                     } else if (type == 'link' && _isURL(data)) {
-                                      // await _launchURL(data);
+                                       await _launchURL(data);
                                     }
                                   },
                                   title: type == 'image'
